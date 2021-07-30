@@ -1,0 +1,14 @@
+<ul>
+    {% for c in cats %}
+        <li>
+        <strong>    
+            <a href="{% url 'show_category' c.slug %}">{{ c.name }}</a>
+        </strong>>
+        </li>
+    {% else %}
+    <li>
+        <a href="{% url 'show_category' c.slug %}">{{ c.name }}</a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>
